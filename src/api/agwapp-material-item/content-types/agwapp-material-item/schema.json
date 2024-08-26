@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "agwapp_material_items",
+  "info": {
+    "singularName": "agwapp-material-item",
+    "pluralName": "agwapp-material-items",
+    "displayName": "AGWAPPMaterialItem"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "agwapp_home_items": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::agwapp-home-item.agwapp-home-item",
+      "mappedBy": "agwapp_material_items"
+    }
+  }
+}
